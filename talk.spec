@@ -9,6 +9,7 @@ Group:		Networking/Chat
 BuildRequires:	ncurses-devel
 Obsoletes:	ntalk
 Provides:	ntalk
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 Source0:	ftp://sunsite.unc.edu/pub/Linux/system/network/chat/netkit-ntalk-%{version}%{_snapshot}.tar.bz2
 Source1:	talk-xinetd
