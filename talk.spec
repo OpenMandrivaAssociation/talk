@@ -3,7 +3,7 @@
 Summary:	Talk client for one-on-one Internet chatting
 Name:		talk
 Version:	0.17
-Release:	%mkrel 13
+Release:	%mkrel 14
 License:	BSD
 Group:		Networking/Chat  
 BuildRequires:	ncurses-devel
