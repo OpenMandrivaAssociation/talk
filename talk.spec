@@ -94,3 +94,5 @@ rm -rf %{buildroot}
 %{_mandir}/man8/in.ntalkd.8*
 %{_mandir}/man8/in.talkd.8*
 %{_mandir}/man8/ntalkd.8*
+%{_mandir}/man8/talkd.8*
+
