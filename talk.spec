@@ -1,7 +1,7 @@
 Summary:	Talk client for one-on-one Internet chatting
 Name:		talk
 Version:	0.17
-Release:	%mkrel 18
+Release:	%mkrel 19
 License:	BSD
 Group:		Networking/Chat  
 Source0:	ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-ntalk-%{version}.tar.gz
@@ -13,6 +13,7 @@ Patch2:		netkit-ntalk-0.17-sockopt.patch
 Patch3:		netkit-ntalk-0.17-i18n.patch
 Patch4:		netkit-ntalk-0.17-resize.patch
 Patch5:		netkit-ntalk-0.17-fix-dos-condition.patch
+Patch6:		netkit-ntalk-0.17-man-ln.patch
 BuildRequires:	ncurses-devel
 Obsoletes:	ntalk
 Provides:	ntalk
@@ -40,7 +41,6 @@ machines.  Talk is a communication program which copies lines from one
 terminal to the terminal of another user.
 
 %prep
-
 %setup -q -n netkit-ntalk-%{version}
 %patch0 -p1 -b .time
 %patch1 -p1 -b .strip
@@ -48,6 +48,7 @@ terminal to the terminal of another user.
 %patch3 -p1 -b .i18n
 %patch4 -p1 -b .resize
 %patch5 -p1 -b .dos
+%patch6 -p0 -b .man
 
 cp %{SOURCE1} talk.xinetd
 cp %{SOURCE2} ntalk.xinetd
@@ -94,3 +95,4 @@ rm -rf %{buildroot}
 %{_mandir}/man8/in.ntalkd.8*
 %{_mandir}/man8/in.talkd.8*
 %{_mandir}/man8/ntalkd.8*
+%{_mandir}/man8/talkd.8*
