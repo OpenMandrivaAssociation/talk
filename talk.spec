@@ -1,7 +1,7 @@
 Summary:	Talk client for one-on-one Internet chatting
 Name:		talk
 Version:	0.17
-Release:	%mkrel 19
+Release:	%mkrel 20
 License:	BSD
 Group:		Networking/Chat  
 Source0:	ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-ntalk-%{version}.tar.gz
