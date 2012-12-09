@@ -1,4 +1,2 @@
 sources:
-  "netkit-ntalk-0.17.tar.gz:"	476daa31c774ff05745dc8cc6b4509013458264c
-  "ntalk-xinetd:"	269b9b1ea725a2183072aaf2df9932e249028ba7
-  "talk-xinetd:"	ed35b7ec1d71c6bc6ec7a2c1d5dd5eb0278f2249
+  "netkit-ntalk-0.17.tar.gz": 476daa31c774ff05745dc8cc6b4509013458264c
