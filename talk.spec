@@ -1,4 +1,4 @@
-Summary:	Talk client for one-on-one Internet chatting
+Summary:	Client for one-on-one Internet chatting
 Name:		talk
 Version:	0.17
 Release:	%mkrel 21
