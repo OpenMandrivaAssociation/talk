@@ -1,7 +1,7 @@
 Summary:	Client for one-on-one Internet chatting
 Name:		talk
 Version:	0.17
-Release:	%mkrel 21
+Release:	22
 License:	BSD
 Group:		Networking/Chat  
 Source0:	ftp://ftp.uk.linux.org/pub/linux/Networking/netkit/netkit-ntalk-%{version}.tar.gz
@@ -17,7 +17,6 @@ Patch6:		netkit-ntalk-0.17-man-ln.patch
 BuildRequires:	ncurses-devel
 Obsoletes:	ntalk
 Provides:	ntalk
-BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}-buildroot
 
 %description
 The talk package provides client and daemon programs for the Internet
@@ -66,7 +65,6 @@ perl -pi -e '
 %make
 
 %install
-rm -rf %{buildroot}
 
 install -d %{buildroot}%{_sysconfdir}/xinetd.d
 install -d %{buildroot}%{_bindir}
@@ -80,15 +78,12 @@ install -m0644 talk.xinetd %{buildroot}%{_sysconfdir}/xinetd.d/talk
 install -m0644 ntalk.xinetd %{buildroot}%{_sysconfdir}/xinetd.d/ntalk
 
 %clean
-rm -rf %{buildroot}
 
 %files
-%defattr(-,root,root)
 %{_bindir}/talk
 %{_mandir}/man1/talk.1*
 
 %files server
-%defattr(-,root,root)
 %config (noreplace) %{_sysconfdir}/xinetd.d/*
 %attr(0711,root,root)%{_sbindir}/in.ntalkd
 %{_sbindir}/in.talkd
