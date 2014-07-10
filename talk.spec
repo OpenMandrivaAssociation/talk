@@ -55,7 +55,7 @@ cp %{SOURCE2} ntalk.xinetd
 %build
 sh configure
 perl -pi -e '
-    s,^CC=.*$,CC=cc,;
+    s,^CC=.*$,CC=%{__cc},;
     s,-O2,\$(RPM_OPT_FLAGS) -D_GNU_SOURCE,;
     s,^BINDIR=.*$,BINDIR=%{_bindir},;
     s,^MANDIR=.*$,MANDIR=%{_mandir},;
