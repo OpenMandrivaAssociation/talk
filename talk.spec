@@ -62,7 +62,7 @@ perl -pi -e '
     s,^SBINDIR=.*$,SBINDIR=%{_sbindir},;
     ' MCONFIG
 
-%make
+%make LDFLAGS="%{optflags}"
 
 %install
 
