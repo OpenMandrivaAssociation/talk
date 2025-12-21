@@ -14,6 +14,7 @@ Patch3:		netkit-ntalk-0.17-i18n.patch
 Patch4:		netkit-ntalk-0.17-resize.patch
 Patch5:		netkit-ntalk-0.17-fix-dos-condition.patch
 Patch6:		netkit-ntalk-0.17-man-ln.patch
+BuildRequires:	make
 BuildRequires:	ncurses-devel
 Obsoletes:	ntalk
 Provides:	ntalk
